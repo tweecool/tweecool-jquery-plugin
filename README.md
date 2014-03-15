@@ -37,8 +37,8 @@ Copy and paste the following script between <body> and </body>
 
 ## Settings
 
-    ```username``` - Your username
-    ```limit``` - Number of tweets to show (Default value set to 5)
-    ```profile_image``` - Show profile image (Default value set to true)
-    ```show_time``` - Show tweet time (Default value set to true)
+    ```username ``` - Your username
+    ```limit ``` - Number of tweets to show (Default value set to 5)
+    ```profile_image ``` - Show profile image (Default value set to true)
+    ```show_time ``` - Show tweet time (Default value set to true)
 
