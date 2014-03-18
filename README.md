@@ -1,6 +1,6 @@
 # TweeCool Jquery Plugin
 
-[TweeCool](http://www.tweecool.com/) is a free web application that helps you display your Twitter feeds on your website. 
+[TweeCool](http://www.tweecool.com/) is a free web application that helps you display your Twitter feed on your website. 
 
 ## Why use TweeCool for your website?
 
