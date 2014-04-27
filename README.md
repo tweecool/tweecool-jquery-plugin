@@ -1,6 +1,6 @@
 # TweeCool Jquery Plugin
 
-[TweeCool](http://www.tweecool.com/) is a free web application that helps you display your Twitter feed on your website. 
+[TweeCool](http://www.tweecool.com/) is a free web application that helps you to display Twitter feed on your website. 
 
 ## Why use TweeCool for your website?
 
@@ -38,7 +38,7 @@ Copy and paste the following script between <body> and </body>
 ## Settings
 
     username : Your username
-    limit  : Number of tweets to show (Default value set to 5)
-    profile_image :  Show profile image (Default value set to true)
-    show_time : Show tweet time (Default value set to true)
+    limit  : Number of tweets to show (Default value: 5)
+    profile_image :  Show profile image (Default value: true)
+    show_time : Show tweet time (Default value: true)
 
