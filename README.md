@@ -1,6 +1,6 @@
 # TweeCool Jquery Plugin
 
-[TweeCool](http://www.tweecool.com/) is a free, fast, simple and reliable 
+[TweeCool](http://www.tweecool.com/) is a free, fast,simple and reliable 
 
 ## Step 1
 
