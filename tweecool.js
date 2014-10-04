@@ -1,3 +1,10 @@
+/*Name : TweeCool
+ *version: 1.2 
+ *Description: get the latest tweets from twitter.
+ *Website: www.tweecool.com
+ *Licence: no licence, feel free to do whatever you want.
+ * Author: TweeCool
+ */
 (function($) {
 	$.fn.extend({
 
@@ -7,7 +14,9 @@
 				username : 'tweecool',
 				limit : 5,
 				profile_image : true,
-				show_time : true
+				show_time : true,
+				show_media : false,
+                                show_media_size: 'thumb'  //values: small, large, thumb, medium 
 
 			}
 
@@ -45,6 +54,7 @@
 				var wrapper = $(this);
 				var wInner = $('<ul>').appendTo(wrapper);
 				var urlpattern = /(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
+                                var media = '';
 
 				$.getJSON("http://api.tweecool.com/?screenname=" + o.username + "&count=" + o.limit, function(data) {
 
@@ -66,8 +76,12 @@
 						} else {
 							var timestamp = '';
 						}
+                                                
+                                                if(o.show_media && field.media_url){
+                                                    media =  '<a href="https://twitter.com/' + o.username + '" target="_blank"><img src="' + field.media_url + ':'+o.show_media_size+'" alt="' + o.username + '" class="media" /></a>';
+                                                }
 
-						wInner.append('<li>' + pIMG + '<div class="tweets_txt">' + field.text.replace(urlpattern, '<a href="$1" target="_blank">$1</a>') + ' <span>' + timestamp + '</span></div></li>');
+						wInner.append('<li>' + pIMG + '<div class="tweets_txt">' + field.text.replace(urlpattern, '<a href="$1" target="_blank">$1</a>') + media + ' <span>' + timestamp + '</span></div></li>');
 					});
 
 				}).fail(function(jqxhr, textStatus, error) {
