@@ -34,4 +34,6 @@ Copy and paste the following script between <body> and </body>
     limit  : Number of tweets to show (Default value: 5)
     profile_image :  Show profile image (Default value: true)
     show_time : Show tweet time (Default value: true)
+	show_media - Show media (Default value: false)
+    show_media_size - Set media size (Default value: thumb)
 
