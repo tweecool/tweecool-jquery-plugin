@@ -1,5 +1,5 @@
 /*Name : TweeCool
- *version: 1.2 
+ *version: 1.3 
  *Description: get the latest tweets from twitter.
  *Website: www.tweecool.com
  *Licence: no licence, feel free to do whatever you want.
@@ -56,7 +56,7 @@
 				var urlpattern = /(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
                                 var media = '';
 
-				$.getJSON("http://api.tweecool.com/?screenname=" + o.username + "&count=" + o.limit, function(data) {
+				$.getJSON("https://www.api.tweecool.com/?screenname=" + o.username + "&count=" + o.limit, function(data) {
 
 					if (data.errors || data == null) {
 						wrapper.html('No tweets available.');
