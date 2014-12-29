@@ -1,5 +1,5 @@
 /*Name : TweeCool
- *version: 1.3 
+ *version: 1.4 
  *Description: get the latest tweets from twitter.
  *Website: www.tweecool.com
  *Licence: no licence, feel free to do whatever you want.
@@ -79,6 +79,8 @@
                                                 
                                                 if(o.show_media && field.media_url){
                                                     media =  '<a href="https://twitter.com/' + o.username + '" target="_blank"><img src="' + field.media_url + ':'+o.show_media_size+'" alt="' + o.username + '" class="media" /></a>';
+                                                }else{
+                                                   media = ''; 
                                                 }
 
 						wInner.append('<li>' + pIMG + '<div class="tweets_txt">' + field.text.replace(urlpattern, '<a href="$1" target="_blank">$1</a>') + media + ' <span>' + timestamp + '</span></div></li>');
