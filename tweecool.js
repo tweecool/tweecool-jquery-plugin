@@ -1,5 +1,5 @@
 /*Name : TweeCool
- *version: 1.4 
+ *version: 1.5 
  *Description: get the latest tweets from twitter.
  *Website: www.tweecool.com
  *Licence: no licence, feel free to do whatever you want.
@@ -26,9 +26,9 @@
 				var nd = new Date();
 				//var gmtDate = Date.UTC(nd.getFullYear(), nd.getMonth(), nd.getDate(), nd.getHours(), nd.getMinutes(), nd.getMilliseconds());
 				var gmtDate = Date.parse(nd);
-				var tweetedTime = Date.parse(time);
-				var timeDiff = (gmtDate - tweetedTime) / 1000;
-				//convert milliseconds to seconds
+				var tweetedTime = time * 1000; //convert seconds to milliseconds
+				var timeDiff = (gmtDate - tweetedTime) / 1000; //convert milliseconds to seconds
+				
 				var second = 1, minute = 60, hour = 60 * 60, day = 60 * 60 * 24, week = 60 * 60 * 24 * 7, month = 60 * 60 * 24 * 30, year = 60 * 60 * 24 * 365;
 
 				if (timeDiff > second && timeDiff < minute) {
@@ -72,7 +72,7 @@
 					$.each(data.tweets, function(i, field) {
 
 						if (o.show_time) {
-							var timestamp = xTimeAgo(field.created_at);
+							var timestamp = xTimeAgo(field.timestamp);
 						} else {
 							var timestamp = '';
 						}
