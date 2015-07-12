@@ -1,9 +1,9 @@
 /*Name : TweeCool
- *version: 1.5 
- *Description: get the latest tweets from twitter.
+ *version: 1.6 
+ *Description: Get the latest tweets from twitter.
  *Website: www.tweecool.com
- *Licence: no licence, feel free to do whatever you want.
- * Author: TweeCool
+ *Licence: No licence, feel free to do whatever you want.
+ *Author: TweeCool
  */
 (function($) {
 	$.fn.extend({
@@ -17,7 +17,6 @@
 				show_time : true,
 				show_media : false,
                                 show_media_size: 'thumb'  //values: small, large, thumb, medium 
-
 			}
 
 			var options = $.extend(defaults, options);
@@ -54,6 +53,8 @@
 				var wrapper = $(this);
 				var wInner = $('<ul>').appendTo(wrapper);
 				var urlpattern = /(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
+				var usernamepattern = /@+(\w+)/ig;
+				var hashpattern = /#+(\w+)/ig;
                                 var media = '';
 
 				$.getJSON("https://www.api.tweecool.com/?screenname=" + o.username + "&count=" + o.limit, function(data) {
@@ -83,7 +84,7 @@
                                                    media = ''; 
                                                 }
 
-						wInner.append('<li>' + pIMG + '<div class="tweets_txt">' + field.text.replace(urlpattern, '<a href="$1" target="_blank">$1</a>') + media + ' <span>' + timestamp + '</span></div></li>');
+						wInner.append('<li>' + pIMG + '<div class="tweets_txt">' + field.text.replace(urlpattern, '<a href="$1" target="_blank">$1</a>').replace(usernamepattern, '<a href="https://twitter.com/$1" target="_blank">@$1</a>').replace(hashpattern, '<a href="https://twitter.com/search?q=%23$1" target="_blank">#$1</a>') + media + ' <span>' + timestamp + '</span></div></li>');
 					});
 
 				}).fail(function(jqxhr, textStatus, error) {
