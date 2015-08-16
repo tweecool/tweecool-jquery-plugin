@@ -4,7 +4,7 @@
 
 ## Step 1
 
-Copy and paste the following script between <header> and </header>
+Copy and paste the following script between &#60;head&#62; and &#60;/head&#62;
 
 ```
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -22,7 +22,7 @@ Copy and paste the following script between <header> and </header>
 
 ## Step 2
 
-Copy and paste the following script between <body> and </body>
+Copy and paste the following script between &#60;body&#62; and &#60;/body&#62;
 
 ```
 <div id="tweecool"></div>
