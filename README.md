@@ -40,5 +40,5 @@ Copy and paste the following script between <body> and </body>
 	action_reply_icon : Reply icon, add your HTML tags or ASCII code (Default value: '&crarr;')
 	action_retweet_icon : Retweet icon, add your HTML tags or ASCII code (Default value: &prop;)
 	action_favorite_icon : Favorite icon, add your HTML tags or ASCII code (Default value: '&#9733;')
-	profile_img_url : If set to 'tweet' the profile URL will be the tweet status URL, otherwise it will be the user's profile URL (Default value: profile)
-	show_retweeted_text : if set to 'true', this will show the original retweeted text in order to avoid truncated text (Default value: false)
+	profile_img_url : If set to 'tweet' the profile image will have tweet URL, otherwise it will be the user's profile URL (Default value: profile)
+	show_retweeted_text : if set to 'true', this will show the original retweeted text and avoid any truncated text (Default value: false)
