@@ -1,5 +1,5 @@
 /*Name : TweeCool
- *version: 1.7 
+ *version: 1.8 
  *Description: Get the latest tweets from twitter.
  *Website: www.tweecool.com
  *Licence: No licence, feel free to do whatever you want.
@@ -36,23 +36,22 @@
 				var timeDiff = (gmtDate - tweetedTime) / 1000; //convert milliseconds to seconds
 				
 				var second = 1, minute = 60, hour = 60 * 60, day = 60 * 60 * 24, week = 60 * 60 * 24 * 7, month = 60 * 60 * 24 * 30, year = 60 * 60 * 24 * 365;
-
+                                
 				if (timeDiff > second && timeDiff < minute) {
-					return Math.round(timeDiff / second) + " seconds ago";
+                                    return Math.round(timeDiff / second) + " second"+(Math.round(timeDiff / second) > 1?'s':'')+" ago";
 				} else if (timeDiff >= minute && timeDiff < hour) {
-					return Math.round(timeDiff / minute) + " minutes ago";
+					return Math.round(timeDiff / minute) + " minute"+(Math.round(timeDiff / minute) > 1?'s':'')+" ago";
 				} else if (timeDiff >= hour && timeDiff < day) {
-					return Math.round(timeDiff / hour) + " hours ago";
+					return Math.round(timeDiff / hour) + " hour"+(Math.round(timeDiff / hour) > 1?'s':'' )+" ago";
 				} else if (timeDiff >= day && timeDiff < week) {
-					return Math.round(timeDiff / day) + " days ago";
+					return Math.round(timeDiff / day) + " day"+(Math.round(timeDiff / day) > 1 ?'s':'')+" ago";
 				} else if (timeDiff >= week && timeDiff < month) {
-					return Math.round(timeDiff / week) + " weeks ago";
+					return Math.round(timeDiff / week) + " week"+(Math.round(timeDiff / week) > 1?'s':'')+" ago";
 				} else if (timeDiff >= month && timeDiff < year) {
-					return Math.round(timeDiff / month) + " months ago";
+					return Math.round(timeDiff / month) + " month"+(Math.round(timeDiff / month) > 1 ?'s':'')+" ago";
 				} else {
 					return 'over a year ago';
 				}
-
 			}
 
 			return this.each(function() {
