@@ -63,7 +63,7 @@
 				var hashpattern = /#+(\w+)/ig;
                                 var pIMG, media, timestamp, abox, mtext;
 
-				$.getJSON("https://www.api.tweecool.com/?screenname=" + o.username + "&count=" + o.limit, function(data) {
+				$.getJSON("http://api.tweecool.com/?screenname=" + o.username + "&count=" + o.limit, function(data) {
 
 					if (data.errors || data == null) {
 						wrapper.html('No tweets available.');
